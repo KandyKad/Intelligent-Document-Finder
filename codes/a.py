@@ -19,7 +19,7 @@ def convert_pdf_to_txt(path, pages=None):'''conversion of pdf into text'''
     converter = TextConverter(manager, output, laparams=LAParams())
     interpreter = PDFPageInterpreter(manager, converter)
 
-    infile = open(path, 'rb')
+    infile = open('file path', 'rb')
     for page in PDFPage.get_pages(infile, pagenums):
         interpreter.process_page(page)
     infile.close()
